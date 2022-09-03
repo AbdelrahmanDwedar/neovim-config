@@ -1,5 +1,5 @@
 -- The setup config table shows all available config options with their default values:
-require("presence"):setup({
+presence_setup = {
     auto_update = true,
     neovim_image_text = "NeoVim", -- Text displayed when hovered over the Neovim image
     main_image = "neovim", -- Main image display (either "neovim" or "file")
@@ -17,4 +17,4 @@ require("presence"):setup({
 	plugin_manager_text = "Managing plugins", -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)
 	reading_text = "Reading %s", -- Format string rendered when a read-only or unmodifiable file is loaded in the buffer (either string or function(filename: string): string)
 	workspace_text      = "Project: %s", -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
-  })
+  }
