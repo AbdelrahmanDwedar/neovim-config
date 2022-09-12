@@ -17,11 +17,15 @@ Plug 'https://github.com/tc50cal/vim-terminal' -- Vim Terminal
 Plug 'https://github.com/windwp/nvim-autopairs.git/' -- auto close brackets nd qoutes
 Plug 'andweeb/presence.nvim' -- discord presence for NeoVim
 Plug 'mattn/emmet-vim' -- emmet plugin
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim' -- Telescope for navigating in the app
 
 vim.call('plug#end')
 
 require('plugins/lualine')
+
+require('plugins/presence')
 require("presence"):setup(
-  -- require("plugins/presence.lua").presence_setup
+
 )
 
