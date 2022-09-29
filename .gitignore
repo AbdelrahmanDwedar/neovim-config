@@ -40,7 +40,7 @@ luac.out
 *.hex
 
 # Plugged
-plugged/
+plugin/
 
 # Spell
 spell/
