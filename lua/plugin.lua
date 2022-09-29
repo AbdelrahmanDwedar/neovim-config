@@ -10,7 +10,6 @@ Plug 'nvim-lualine/lualine.nvim' -- lua status bar
 Plug 'https://github.com/neoclide/coc.nvim'  -- Auto Completion
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' -- RetPro Scheme
 Plug 'https://github.com/ap/vim-css-color' -- CSS Color Preview
-Plug 'https://github.com/tc50cal/vim-terminal' -- Vim Terminal
 Plug 'https://github.com/windwp/nvim-autopairs.git/' -- auto close brackets nd qoutes
 Plug 'andweeb/presence.nvim' -- discord presence for NeoVim
 Plug 'mattn/emmet-vim' -- emmet plugin
