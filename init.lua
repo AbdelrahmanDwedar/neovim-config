@@ -6,7 +6,8 @@ vim.cmd([[set encoding=utf8]])
 -- vim.cmd([[set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete 11]])
 
 -- plugins
-require('plugin') 
+-- require('plugin') 
+require('plugins')
 
 -- Colorscheme
 require('colorscheme')
