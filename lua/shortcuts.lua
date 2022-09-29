@@ -9,10 +9,10 @@ vim.api.nvim_set_keymap('i', '<C-h>', '<C-w>', {noremap = true})
 nmap('<C-m>', '<Esc>o')
 nmap('<Tab>', '<C-p>')
 
--- NERDTree fast access shortcuts 
-nmap('<C-f>', ':NERDTreeFocus<CR>')
-nmap('<C-t>', ':NERDTreeToggle<CR>')
-nmap('<C-n>', ':NERDTree<CR>')
+-- nvim tree (lua) fast access shortcuts 
+nmap('<C-f>', ':NvimTreeFocus<CR>')
+nmap('<C-t>', ':NvimTreeToggle<CR>')
+nmap('<C-n>', ':NvimTreeOpen<CR>')
 
 -- Terminal shortcuts
 nmap('tt', ':17sp|:terminal<CR>')
