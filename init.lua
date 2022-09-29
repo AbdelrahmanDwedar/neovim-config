@@ -7,7 +7,6 @@ vim.cmd([[set encoding=utf8]])
 
 -- plugins
 require('plugin') 
-require('nvim-autopairs').setup {}
 
 -- Colorscheme
 require('colorscheme')
