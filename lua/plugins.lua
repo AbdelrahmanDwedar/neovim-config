@@ -55,19 +55,13 @@ return require('packer').startup(function()
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = function()
-      require('lualine.nvim').setup({
-        options = {
-	      theme = 'horizon',
-          icons_enabled = true,
-        },
-      })
-    end
+    config = function() require('lualine').setup {} end
   }
 
   -- Coc intelligence 
   use {
-    'neoclide/coc.nvim'
+    'neoclide/coc.nvim',
+    run = 'yarn install'
   }
 
   -- auto conpletion for `"({[ etc..
@@ -116,9 +110,8 @@ return require('packer').startup(function()
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
-    cmd = 'NvimTreeToggle',
     config = function()
-      require("nvim-tree.lua"):setup({
+      require("nvim-tree").setup({
         sort_by = "case_sensitive",
         view = {
           adaptive_size = true,
@@ -141,5 +134,4 @@ return require('packer').startup(function()
   }
 
 end)
-
 
