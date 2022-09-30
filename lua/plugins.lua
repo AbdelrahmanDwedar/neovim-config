@@ -121,6 +121,9 @@ return require('packer').startup(function()
         },
         filters = {
           dotfiles = false,
+          custom = {
+            '.git'
+          },
         },
       })
     end
