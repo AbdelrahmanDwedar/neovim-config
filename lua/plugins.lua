@@ -18,13 +18,6 @@ return require('packer').startup(function()
     'tpope/vim-surround'
   }
 
-  -- Markdown preview
-  use {
-    'iamcco/markdown-preview.nvim', 
-    run = 'cd app && yarn install', 
-    cmd = 'MarkdownPreview'
-  }
-
   -- For Commenting gcc & gc
   use {
     'tpope/vim-commentary'
@@ -131,6 +124,20 @@ return require('packer').startup(function()
         },
       })
     end
+  }
+
+  use {
+    'norcalli/nvim-terminal.lua',
+    config = function()
+      require('terminal').setup()
+    end
+  }
+
+  -- Markdown preview
+  use {
+    'iamcco/markdown-preview.nvim', 
+    run = 'cd app && yarn install', 
+    cmd = 'MarkdownPreview'
   }
 
 end)
