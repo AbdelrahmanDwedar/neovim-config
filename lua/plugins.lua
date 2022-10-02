@@ -98,6 +98,7 @@ return require('packer').startup(function()
     }
   }
 
+  -- NeoVim Tree written in lua
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -130,6 +131,7 @@ return require('packer').startup(function()
     end
   }
 
+  -- neovim terminal (with :terminal)
   use {
     'norcalli/nvim-terminal.lua',
     config = function()
