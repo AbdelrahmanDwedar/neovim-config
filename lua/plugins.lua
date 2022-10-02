@@ -107,8 +107,10 @@ return require('packer').startup(function()
     config = function()
       require("nvim-tree").setup({
         sort_by = "case_sensitive",
+        hijack_cursor = true,
         view = {
           adaptive_size = true,
+          centralize_selection = false,
           mappings = {
             list = {
               { key = "u", action = "dir_up" },
