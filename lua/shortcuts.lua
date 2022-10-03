@@ -3,9 +3,8 @@ function nmap(shortcut, command)
 end
 -- General shortcuts
 nmap('<C-Enter>', '<Esc>o')
-nmap('<S-b>', '^')
-nmap('<S-e>', '$')
-vim.api.nvim_set_keymap('i', '<C-h>', '<C-w>', {noremap = true})
+nmap('B', '^')
+nmap('E', '$')
 nmap('<C-m>', '<Esc>o')
 nmap('<Tab>', '<C-p>')
 
@@ -33,4 +32,4 @@ nmap('<C-Down>', ':resize -3<CR>')
 
 -- Tabs shortcuts 
 nmap('rt', ':tabclose<CR>')
-nmap('ft', ':tabfind ')
+nmap('tf', ':tabfind ')
