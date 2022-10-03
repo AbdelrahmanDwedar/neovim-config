@@ -24,3 +24,7 @@ vim.opt.hidden = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 7
 vim.opt.wildmode = {'longest', 'list', 'full'}
+
+-- Setting up splits directions 
+vim.cmd([[set splitbelow splitright]])
+vim.cmd([[set encoding=utf8]])
