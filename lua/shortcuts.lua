@@ -14,8 +14,9 @@ nmap('<C-f>', ':NvimTreeFocus<CR>')
 nmap('<C-t>', ':NvimTreeToggle<CR>')
 nmap('<C-n>', ':NvimTreeOpen<CR>')
 
--- Terminal shortcuts
-nmap('tt', ':17sp|:terminal<CR>')
+-- Telescope
+nmap('tt', ':Telescope ')
+nmap('<C-p>', ':Telescope fd<CR>')
 
 -- Splits --
 -- Splits moving with ctrl + hjkl shortcuts

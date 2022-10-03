@@ -133,19 +133,16 @@ return require('packer').startup(function()
     end
   }
 
-  -- neovim terminal (with :terminal)
-  use {
-    'norcalli/nvim-terminal.lua',
-    config = function()
-      require('terminal').setup()
-    end
-  }
-
   -- Markdown preview
   use {
     'iamcco/markdown-preview.nvim', 
     run = 'cd app && yarn install', 
     cmd = 'MarkdownPreview'
+  }
+
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim', 
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' 
   }
 
 end)
