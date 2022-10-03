@@ -10,8 +10,7 @@ nmap('<Tab>', '<C-p>')
 
 -- nvim tree (lua) fast access shortcuts 
 nmap('<C-f>', ':NvimTreeFocus<CR>')
-nmap('<C-t>', ':NvimTreeToggle<CR>')
-nmap('<C-n>', ':NvimTreeOpen<CR>')
+nmap('<C-z>', ':NvimTreeToggle<CR>')
 
 -- Telescope
 nmap('tt', ':Telescope ')
