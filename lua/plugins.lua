@@ -118,6 +118,7 @@ return require('packer').startup(function()
               { key = "u", action = "dir_up" },
               { key = "t", action = "tabnew" },
               { key = "s", action = "split" },
+              { key = "v", action = "vsplit" },
               { key = "C", action = "cd" }
             },
           },
