@@ -53,12 +53,10 @@ return require('packer').startup(function()
     end
   }
 
-  -- Coc intelligence 
+  -- lsp support (languages support protocol)
   use {
-    'neoclide/coc.nvim',
-    run = 'yarn install'
+    'neovim/nvim-lspconfig'
   }
-
   -- auto conpletion for `"({[ etc..
   use {
   	"windwp/nvim-autopairs",
