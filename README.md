@@ -22,22 +22,22 @@ I don't use ton of plugins with NeoVim, I just use the plugins that I find helpf
 ### Native Vim Plugins
 
 - [Vim Surround](https://github.com/tpope/vim-surround)
-- [Vim Commentary](https://github.com/tpope/vim-commentary)
 - [Vim Wakatime](https://github.com/wakatime/vim-wakatime)
 - [Awesome Vim Colorschemes](https://github.com/rafi/awesome-vim-color-schemes)
 - [Vim CSS Color](https://github.com/ap/vim-css-color)
 - [Emmet](https://github.com/mattn/emmet-vim)
+- [Vim visual multi](https://github.com/mg979/vim-visual-multi)
 
 ### NeoVim (only) Plugins
 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) `only for NeoVim`
-- [COC](https://github.com/neoclide/coc.nvim)
+- [nvim lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [Nvim Autopairs](https://github.com/windwp/nvim-autopairs)
 - [Presence](https://github.com/andweeb/presence.nvim) `Discord Presence`
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Nvim Tree](https:github.com/kyazdani42/nvim-tree.lua)
-- [Nvim Terminal](https://github.com/norcalli/nvim-terminal.lua)
 - [Markdown Preview](https://github.com/iamcco/markdown-preview.nvim)
+- [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 
 ---
 
