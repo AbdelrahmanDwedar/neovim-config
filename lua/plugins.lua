@@ -37,6 +37,10 @@ return require('packer').startup(function()
     'mattn/emmet-vim'
   }
 
+  use {
+	'mg979/vim-visual-multi'
+  }
+
   -- === #### NeoVim plugins #### === --
 
   -- lua status bar
