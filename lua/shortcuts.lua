@@ -16,6 +16,9 @@ nmap('<C-z>', ':NvimTreeToggle<CR>')
 nmap('tt', ':Telescope ')
 nmap('<C-p>', ':Telescope fd<CR>')
 
+-- vim multi corsur
+nmap('<C-c>', ':VMClear<CR>')
+
 -- Splits --
 -- Splits moving with ctrl + hjkl shortcuts
 nmap('<C-h>', '<C-w>h')
