@@ -8,5 +8,5 @@ require('plugins')
 require('colorscheme')
 
 -- shortcuts
-require('shortcuts')
+require('keymaps')
 
