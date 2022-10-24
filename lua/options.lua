@@ -1,22 +1,25 @@
 -- -==*==- Options -==*==- --
 
+-- General
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.termguicolors = false
+
 -- Tabs
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.smarttab = true
-vim.o.smartindent = true
-vim.o.expandtab = false
-vim.o.shiftwidth = 4
-vim.o.autoindent = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.smarttab = true
+vim.opt.smartindent = true
+vim.opt.expandtab = false
+vim.opt.shiftwidth = 4
+vim.opt.autoindent = true
 
 -- numbers
-vim.o.number = true
-vim.o.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- UX 
-vim.o.spell = true
+vim.opt.spell = true
 vim.opt.mouse = "a"
-vim.opt.clipboard = 'unnamedplus'
 
 -- styling
 vim.opt.hlsearch = false
@@ -26,5 +29,5 @@ vim.opt.scrolloff = 7
 vim.opt.wildmode = {'longest', 'list', 'full'}
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.fileenconding = 'utf-8'
+vim.opt.fileencoding = "utf-8"
 
