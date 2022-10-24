@@ -13,11 +13,6 @@ return require('packer').startup(function()
 
   -- === #### Native vim plugins ### === ---
 
-  -- Surrounding ysw)
-  use {
-    'tpope/vim-surround'
-  }
-
   -- wakatime watcher
   use {
     'wakatime/vim-wakatime'
@@ -154,6 +149,12 @@ return require('packer').startup(function()
       require('Comment').setup()
     end
   }
+
+  use({
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+      config = function() require("nvim-surround").setup() end
+  })
 
 end)
 
