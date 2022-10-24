@@ -9,3 +9,6 @@ require('keymaps')
 
 -- plugins
 require('plugins')
+
+-- config
+require('config')
