@@ -23,11 +23,6 @@ return require('packer').startup(function()
     'rafi/awesome-vim-colorschemes'
   }
 
-  -- vim css colors highlighting
-  use {
-    'ap/vim-css-color'
-  }
-
   use {
     'mattn/emmet-vim'
   }
@@ -155,6 +150,11 @@ return require('packer').startup(function()
       tag = "*", -- Use for stability; omit to use `main` branch for the latest features
       config = function() require("nvim-surround").setup() end
   })
+
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function() require'colorizer'.setup() end
+  }
 
 end)
 
