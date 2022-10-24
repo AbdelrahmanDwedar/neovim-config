@@ -33,6 +33,29 @@ return require('packer').startup(function()
 
   -- === #### NeoVim plugins #### === --
 
+  -- lsp
+  use {
+	"neovim/nvim-lspconfig",
+	requires = {
+		"williamboman/mason.nvim",
+		"jose-elias-alvarez/null-ls.nvim"
+	}
+  }
+
+  use {
+	  "hrsh7th/nvim-cmp",
+	  requires = {
+		  "hrsh7th/cmp-buffer",
+		  "hrsh7th/cmp-path",
+		  "hrsh7th/cmp-nvim-lsp",
+		  "hrsh7th/cmp-nvim-lua"
+	  }
+  }
+
+  use "nvim-treesitter/nvim-treesitter"
+
+  use "lewis6991/gitsigns.nvim"
+
   -- lua status bar
   use {
     'nvim-lualine/lualine.nvim',
