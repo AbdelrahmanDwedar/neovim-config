@@ -130,13 +130,6 @@ return require('packer').startup(function()
     cmd = 'MarkdownPreview'
   }
 
-  -- use {
-  --   'romgrk/barbar.nvim',
-  --   requires = {
-  --     'kyazdani42/nvim-web-devicons',
-  --   }
-  -- }
-
   -- For Commenting gcc & gc
   use {
     'numToStr/Comment.nvim',
