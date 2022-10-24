@@ -1,5 +1,5 @@
 -- Settings (numbers, tab, etc...)
-require('settings')
+require('options')
 
 -- plugins
 require('plugins')
