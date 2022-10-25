@@ -5,6 +5,7 @@ end
 
 configs.setup({
 	ensure_installed = "all", -- one of "all" or a list of languages
+	sync_install = false,
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	highlight = {
 		enable = true, -- false will disable the whole extension
