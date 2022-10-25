@@ -44,6 +44,13 @@ keymap('n', 'tf', ':tabfind ', opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+-- Paste without counting the deleted values
+keymap('n', '"p', '"0p', opts)
+
+-- add semicolon in the end
+keymap('n', '<Leader>;', 'A;', opts)
+keymap('n', '<C-Semicolon>', 'A;', opts)
+
 --==## Insert mode ##==--
 -- Telescope
 keymap('i', '<C-p>', '<Esc>:Telescope find_files<CR>', opts)
