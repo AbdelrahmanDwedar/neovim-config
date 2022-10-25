@@ -3,7 +3,7 @@
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins.lua source "afile" | PackerCompile
   augroup end
 ]])
 
@@ -48,7 +48,7 @@ return require('packer').startup(function()
   use "lewis6991/gitsigns.nvim"
 
   -- lua status bar
-  use {
+  use { 
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     config = function() require('lualine').setup {} end
@@ -60,7 +60,7 @@ return require('packer').startup(function()
   }
   -- discord presence for neovim
   use 'andweeb/presence.nvim'
-  
+
   -- Telescope for navigation
   use {
     'nvim-telescope/telescope.nvim',
