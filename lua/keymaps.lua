@@ -55,6 +55,9 @@ keymap('n', '<C-Semicolon>', 'A;', opts)
 keymap('n', '<Down>', 'gj', opts)
 keymap('n', '<Up>', 'gk', opts)
 
+-- selecting last change
+keymap('n', 'gV', '`[v`]', opts)
+
 --==## Insert mode ##==--
 -- Telescope
 keymap('i', '<C-p>', '<Esc>:Telescope find_files<CR>', opts)
