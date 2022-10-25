@@ -85,10 +85,10 @@ return require('packer').startup(function()
       config = function() require("nvim-surround").setup() end
   })
 
-  use {
-    'norcalli/nvim-colorizer.lua',
-    config = function() require'colorizer'.setup() end
-  }
+  -- use {
+  --   'norcalli/nvim-colorizer.lua',
+  --   config = function() require'colorizer'.setup() end
+  -- }
 
 end)
 
