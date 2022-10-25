@@ -14,22 +14,16 @@ return require('packer').startup(function()
   -- === #### Native vim plugins ### === ---
 
   -- wakatime watcher
-  use {
-    'wakatime/vim-wakatime'
-  }
+  use 'wakatime/vim-wakatime'
 
   -- awesome vim colorschemes
-  use {
-    'rafi/awesome-vim-colorschemes'
-  }
+  use 'rafi/awesome-vim-colorschemes'
 
   use {
     'mattn/emmet-vim'
   }
 
-  use {
-	'mg979/vim-visual-multi'
-  }
+  use 'mg979/vim-visual-multi'
 
   -- === #### NeoVim plugins #### === --
 
