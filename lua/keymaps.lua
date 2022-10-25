@@ -51,6 +51,10 @@ keymap('n', '"p', '"0p', opts)
 keymap('n', '<Leader>;', 'A;', opts)
 keymap('n', '<C-Semicolon>', 'A;', opts)
 
+-- arrows for gj & gk (when using warping mode)
+keymap('n', '<Down>', 'gj', opts)
+keymap('n', '<Up>', 'gk', opts)
+
 --==## Insert mode ##==--
 -- Telescope
 keymap('i', '<C-p>', '<Esc>:Telescope find_files<CR>', opts)
