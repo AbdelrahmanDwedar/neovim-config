@@ -19,10 +19,6 @@ return require('packer').startup(function()
   -- awesome vim colorschemes
   use 'rafi/awesome-vim-colorschemes'
 
-  use {
-    'mattn/emmet-vim'
-  }
-
   use 'mg979/vim-visual-multi'
 
   -- === #### NeoVim plugins #### === --
