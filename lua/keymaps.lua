@@ -55,6 +55,10 @@ keymap('n', '<C-Semicolon>', 'A;', opts)
 -- Telescope
 keymap('i', '<C-p>', '<Esc>:Telescope find_files<CR>', opts)
 
+keymap('i', '<C-BS>', '<C-w>', opts) -- remove a word backwards
+keymap('i', '<C-Enter>', '<Esc>o', opts) -- new line wherever in the line within insert mode
+keymap('i', '<C-Semicolon>', "<Esc>A;", opts) -- add ; in the end of the line 
+
 --==## Visual mode ##==--
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
