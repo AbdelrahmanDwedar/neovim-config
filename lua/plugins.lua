@@ -28,6 +28,7 @@ return require('packer').startup(function()
 	"neovim/nvim-lspconfig",
 	requires = {
 		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
 		"jose-elias-alvarez/null-ls.nvim"
 	}
   }
@@ -53,9 +54,6 @@ return require('packer').startup(function()
     config = function() require('lualine').setup {} end
   }
 
-  -- lsp support (languages support protocol)
-  use 'neovim/nvim-lspconfig'
-  -- auto conpletion for `"({[ etc..
   use {
   	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end

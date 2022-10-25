@@ -1,5 +1,5 @@
 require('config.cmp')
--- require('config.lsp')
+require('config.lsp')
 require('config.nvim-tree')
 require('config.presence')
 -- require('config.treesitter')
