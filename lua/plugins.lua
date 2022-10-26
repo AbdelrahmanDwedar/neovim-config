@@ -44,48 +44,48 @@ return require('packer').startup(function()
   }
 
   use {
-	  "nvim-treesitter/nvim-treesitter",
-	  run = "TSUpdate"
+	"nvim-treesitter/nvim-treesitter",
+	run = "TSUpdate"
   }
 
   use "lewis6991/gitsigns.nvim"
 
   -- lua status bar
   use { 
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = function() require('lualine').setup {} end
+	'nvim-lualine/lualine.nvim',
+	requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+	config = function() require('lualine').setup {} end
   }
 
   use {
-  	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+	"windwp/nvim-autopairs",
+	config = function() require("nvim-autopairs").setup {} end
   }
   -- discord presence for neovim
   use 'andweeb/presence.nvim'
 
   -- Telescope for navigation
   use {
-    'nvim-telescope/telescope.nvim',
+	'nvim-telescope/telescope.nvim',
 	requires = 'nvim-lua/plenary.nvim'
   }
 
   -- NeoVim Tree written in lua
   use {
-    'kyazdani42/nvim-tree.lua',
+	'kyazdani42/nvim-tree.lua',
 	requires = 'kyazdani42/nvim-web-devicons',
   }
 
   -- For Commenting gcc & gc
   use {
-    'numToStr/Comment.nvim',
-    config = function() require('Comment').setup() end
+	'numToStr/Comment.nvim',
+	config = function() require('Comment').setup() end
   }
 
   use({
-      "kylechui/nvim-surround",
-      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-      config = function() require("nvim-surround").setup() end
+	  "kylechui/nvim-surround",
+	  tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+	  config = function() require("nvim-surround").setup() end
   })
 
   -- use {
