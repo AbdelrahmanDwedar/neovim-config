@@ -1,9 +1,6 @@
 -- Settings (numbers, tab, etc...)
 require('options')
 
--- Colorscheme
-require('colorscheme')
-
 -- shortcuts
 require('keymaps')
 
@@ -12,3 +9,6 @@ require('plugins')
 
 -- config
 require('config')
+
+-- Colorscheme
+require('colorscheme')
