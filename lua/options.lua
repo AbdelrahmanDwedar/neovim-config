@@ -2,7 +2,7 @@
 
 -- General
 vim.opt.clipboard = 'unnamedplus'
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 
 -- Tabs
 vim.opt.tabstop = 4
