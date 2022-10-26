@@ -41,15 +41,15 @@ keymap('n', 'rt', ':tabclose<CR>', opts)
 keymap('n', 'tf', ':tabfind ', opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Paste without counting the deleted values
 keymap('n', '"p', '"0p', opts)
 
 -- add semicolon in the end
-keymap('n', '<Leader>;', 'A;', opts)
-keymap('n', '<C-Semicolon>', 'A;', opts)
+keymap('n', '<Leader>;', 'A;<Esc>', opts)
+-- keymap('n', '<C-Semicolon>', 'A;', opts)
 
 -- arrows for gj & gk (when using warping mode)
 keymap('n', '<Down>', 'gj', opts)
