@@ -1,1 +1,11 @@
-vim.cmd('colorscheme rdark-terminal2')
+require('tokyonight').setup({
+	style = "night",
+	transparent = true,
+	terminal_colors = true,
+	styles = {
+		sidebars = "transparent", -- style for sidebars, see below
+		floats = "transparent",
+	}
+})
+
+vim.cmd('colorscheme tokyonight')
