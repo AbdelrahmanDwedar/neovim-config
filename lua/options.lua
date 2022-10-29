@@ -20,6 +20,7 @@ vim.opt.relativenumber = true
 -- UX 
 vim.opt.spell = true
 vim.opt.mouse = "a"
+vim.o.foldmethod = "syntax"
 
 -- styling
 vim.opt.hlsearch = false
