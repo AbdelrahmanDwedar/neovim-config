@@ -12,3 +12,6 @@ require('config')
 
 -- Colorscheme
 require('colorscheme')
+
+-- autocmd
+require('autocmd')
