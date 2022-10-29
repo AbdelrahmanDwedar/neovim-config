@@ -58,6 +58,9 @@ keymap('n', '<Up>', 'gk', opts)
 -- selecting last change
 keymap('n', 'gV', '`[v`]', opts)
 
+-- use diff mode with one keymap 
+keymap('n', '<Leader><Leader>d', ':windo diffthis<CR>', opts)
+
 --==## Insert mode ##==--
 -- Telescope
 keymap('i', '<C-p>', '<Esc>:Telescope find_files<CR>', opts)
