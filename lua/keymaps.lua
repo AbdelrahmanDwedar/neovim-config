@@ -1,7 +1,8 @@
 local opts = { noremap = true, silent = true }
+local nor = { noremap = true, silent = false }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -10,15 +11,13 @@ vim.g.maplocalleader = " "
 
 --==## Normal mode ##==--
 -- General shortcuts
-keymap('n', '<C-Enter>', '<Esc>o', opts)
 
 -- nvim tree (lua) fast access shortcuts 
 keymap('n', '<Leader>e', ":NvimTreeToggle<CR>" , opts)
 keymap('n', '<Leader>f', ":NvimTreeFocus<CR>" , opts)
 
 -- Telescope
-keymap('n', '<Leader>t', ':Telescope ', opts)
-keymap('n', '<C-p>', ':Telescope find_files<CR>', opts)
+keymap('n', '<Leader>t', ':Telescope ', nor)
 
 -- vim multi corsur
 keymap('n', '<C-c>', ':VMClear<CR>', opts)
@@ -40,10 +39,6 @@ keymap('n', '<C-Down>', ':resize -3<CR>', opts)
 keymap('n', 'rt', ':tabclose<CR>', opts)
 keymap('n', 'tf', ':tabfind ', opts)
 
--- Move text up and down
-keymap("n", "<A-j>", ":m .+1<CR>==", opts)
-keymap("n", "<A-k>", ":m .-2<CR>==", opts)
-
 -- Paste without counting the deleted values
 keymap('n', '"p', '"0p', opts)
 
@@ -62,24 +57,25 @@ keymap('n', 'gV', '`[v`]', opts)
 keymap('n', '<Leader><Leader>d', ':windo diffthis<CR>', opts)
 
 --==## Insert mode ##==--
--- Telescope
-keymap('i', '<C-p>', '<Esc>:Telescope find_files<CR>', opts)
-
 keymap('i', '<C-BS>', '<C-w>', opts) -- remove a word backwards
-keymap('i', '<C-Enter>', '<Esc>o', opts) -- new line wherever in the line within insert mode
-keymap('i', '<C-Semicolon>', "<Esc>A;", opts) -- add ; in the end of the line 
 
 --==## Visual mode ##==--
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-
 --==## Visual Block mode ##==--
 -- Move text up and down
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+--==## Multi modes ##==--
+-- Files finding with Telescope
+keymap({ 'n', 'i' }, '<C-p>', '<Esc>:Telescope find_files<CR>', opts)
+
+-- new line
+keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o', opts)
+
+-- Move text up and down
+keymap({ "n", "v" }, "<A-j>", ":m .+1<CR>==", opts)
+keymap({ "n", "v" }, "<A-k>", ":m .-2<CR>==", opts)
