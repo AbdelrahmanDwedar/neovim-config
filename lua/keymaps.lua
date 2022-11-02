@@ -10,8 +10,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 --==## Normal mode ##==--
--- General shortcuts
-
 -- nvim tree (lua) fast access shortcuts 
 keymap('n', '<Leader>e', ":NvimTreeToggle<CR>" , opts)
 keymap('n', '<Leader>f', ":NvimTreeFocus<CR>" , opts)
