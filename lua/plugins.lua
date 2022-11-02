@@ -113,9 +113,6 @@ return require('packer').startup(function()
 	-- wakatime watcher
 	use 'wakatime/vim-wakatime'
 
-	-- awesome vim colorschemes
-	use 'rafi/awesome-vim-colorschemes'
-
 	-- multi cursors visualy
 	use 'mg979/vim-visual-multi'
 
