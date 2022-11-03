@@ -12,10 +12,14 @@ vim.g.maplocalleader = " "
 --==## Normal mode ##==--
 -- nvim tree (lua) fast access shortcuts 
 keymap('n', '<Leader>e', ":NvimTreeToggle<CR>" , opts)
-keymap('n', '<Leader>f', ":NvimTreeFocus<CR>" , opts)
+keymap('n', '<Leader><Leader>f', ":NvimTreeFocus<CR>" , opts)
 
 -- Telescope
-keymap('n', '<Leader>t', ':Telescope ', nor)
+keymap('n', '<Leader>tt', ':Telescope ', nor)
+keymap('n', '<Leader>fr', ':Telescope lsp_references<CR>', opts)
+keymap('n', '<Leader>fb', ':Telescope git_branches<CR>', opts)
+keymap('n', '<Leader>ff', ':Telescope find_files<CR>', opts)
+keymap('n', '<Leader>fg', ':Telescope registers<CR>', opts)
 
 -- vim multi corsur
 keymap('n', '<C-c>', ':VMClear<CR>', opts)
