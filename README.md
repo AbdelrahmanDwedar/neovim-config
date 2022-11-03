@@ -19,25 +19,29 @@ I don't use ton of plugins with NeoVim, I just use the plugins that I find helpf
 
 ## Used Plugins
 
-### Native Vim Plugins
-
-- [Vim Surround](https://github.com/tpope/vim-surround)
-- [Vim Wakatime](https://github.com/wakatime/vim-wakatime)
-- [Awesome Vim Colorschemes](https://github.com/rafi/awesome-vim-color-schemes)
-- [Vim CSS Color](https://github.com/ap/vim-css-color)
-- [Emmet](https://github.com/mattn/emmet-vim)
-- [Vim visual multi](https://github.com/mg979/vim-visual-multi)
-
 ### NeoVim (only) Plugins
 
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [mason.nvim](https://github.com/williamboman/mason.nvim)
+- [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) `only for NeoVim`
-- [nvim lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [Nvim Autopairs](https://github.com/windwp/nvim-autopairs)
 - [Presence](https://github.com/andweeb/presence.nvim) `Discord Presence`
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Nvim Tree](https:github.com/kyazdani42/nvim-tree.lua)
-- [Markdown Preview](https://github.com/iamcco/markdown-preview.nvim)
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+- [nvim-surround](https://github.com/kylechui/nvim-surround)
+- [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
+- [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+<!-- - [](https://github.com/) -->
+
+### Native Vim Plugins
+- [Vim Wakatime](https://github.com/wakatime/vim-wakatime)
+- [Vim visual multi](https://github.com/mg979/vim-visual-multi)
 
 ---
 
