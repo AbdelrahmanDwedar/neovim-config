@@ -45,6 +45,9 @@ keymap('n', 'gV', '`[v`]', opts)
 -- use diff mode with one keymap 
 keymap('n', '<Leader><Leader>d', ':windo diffthis<CR>', opts)
 
+-- save and source
+keymap('n', '<Leader><Leader>x', ':w<CR>:source %<CR>', opts)
+
 --==## Visual mode ##==--
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
