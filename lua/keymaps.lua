@@ -24,19 +24,6 @@ keymap('n', '<Leader>fg', ':Telescope registers<CR>', opts)
 -- vim multi corsur
 keymap('n', '<C-c>', ':VMClear<CR>', opts)
 
--- Splits --
--- Splits moving with ctrl + hjkl shortcuts
-keymap('n', '<C-h>', '<C-w>h', opts)
-keymap('n', '<C-j>', '<C-w>j', opts)
-keymap('n', '<C-k>', '<C-w>k', opts)
-keymap('n', '<C-l>', '<C-w>l', opts)
-keymap('n', '<C-=>', '<C-w>=', opts)
--- Split resizing
-keymap('n', '<C-Left>', ':vertical resize +3<CR>', opts)
-keymap('n', '<C-Right>', ':vertical resize -3<CR>', opts)
-keymap('n', '<C-Up>', ':resize +3<CR>', opts)
-keymap('n', '<C-Down>', ':resize -3<CR>', opts)
-
 -- Tabs shortcuts 
 keymap('n', 'rt', ':tabclose<CR>', opts)
 keymap('n', 'tf', ':tabfind ', opts)
@@ -81,3 +68,16 @@ keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o', opts)
 -- Move text up and down
 keymap({ "n", "v" }, "<A-j>", ":m .+1<CR>==", opts)
 keymap({ "n", "v" }, "<A-k>", ":m .-2<CR>==", opts)
+
+-- Splits --
+-- Splits moving with ctrl + hjkl shortcuts
+keymap({ 'n', 'i' }, '<C-h>', '<C-w>h', opts)
+keymap({ 'n', 'i' }, '<C-j>', '<C-w>j', opts)
+keymap({ 'n', 'i' }, '<C-k>', '<C-w>k', opts)
+keymap({ 'n', 'i' }, '<C-l>', '<C-w>l', opts)
+keymap({ 'n', 'i' }, '<C-=>', '<C-w>=', opts)
+-- Split resizing
+keymap({ 'n', 'i' }, '<C-Left>', ':vertical resize +3<CR>', opts)
+keymap({ 'n', 'i' }, '<C-Right>', ':vertical resize -3<CR>', opts)
+keymap({ 'n', 'i' }, '<C-Up>', ':resize +3<CR>', opts)
+keymap({ 'n', 'i' }, '<C-Down>', ':resize -3<CR>', opts)
