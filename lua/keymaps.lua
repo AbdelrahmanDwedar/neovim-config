@@ -45,9 +45,6 @@ keymap('n', 'gV', '`[v`]', opts)
 -- use diff mode with one keymap 
 keymap('n', '<Leader><Leader>d', ':windo diffthis<CR>', opts)
 
---==## Insert mode ##==--
-keymap('i', '<C-BS>', '<C-w>', opts) -- remove a word backwards
-
 --==## Visual mode ##==--
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -68,6 +65,9 @@ keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o', opts)
 -- Move text up and down
 keymap({ "n", "v" }, "<A-j>", ":m .+1<CR>==", opts)
 keymap({ "n", "v" }, "<A-k>", ":m .-2<CR>==", opts)
+
+-- remove a word backwards
+keymap({ 'i', 'c' }, '<C-BS>', '<C-w>', nor)
 
 -- Splits --
 -- Splits moving with ctrl + hjkl shortcuts
