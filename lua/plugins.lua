@@ -106,7 +106,7 @@ return require('packer').startup(function()
 	}
 
 	-- best neovim colorschemes in one place
-	use '~/Programming/projects/cli/awesome-nvim-colorschemes'
+	use 'AbdelrahmanDwedar/awesome-nvim-colorschemes'
 
 	-- === #### Native vim plugins ### === ---
 
