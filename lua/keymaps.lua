@@ -20,6 +20,7 @@ keymap('n', '<Leader>fr', ':Telescope lsp_references<CR>', opts)
 keymap('n', '<Leader>fb', ':Telescope git_branches<CR>', opts)
 keymap('n', '<Leader>ff', ':Telescope find_files<CR>', opts)
 keymap('n', '<Leader>fg', ':Telescope registers<CR>', opts)
+keymap('n', '<Leader>fs', ':Telescope spell_suggest<CR>', opts)
 
 -- vim multi corsur
 keymap('n', '<C-c>', ':VMClear<CR>', opts)
