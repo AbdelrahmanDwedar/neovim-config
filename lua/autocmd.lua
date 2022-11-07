@@ -1,46 +1,92 @@
-vim.cmd [[
-	augroup _general_settings
-		autocmd!
-		autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR> 
-		autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200}) 
-		autocmd BufWinEnter * :set formatoptions-=cro
-		autocmd FileType qf set nobuflisted
-	augroup end
+-- shurtcuts
+local keymap = vim.keymap.set
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
+local opts = { noremap = true, silent = true }
+local nor = { noremap = true, silent = false }
 
-	augroup _git
-		autocmd!
-		autocmd FileType gitcommit setlocal wrap
-		autocmd FileType gitcommit setlocal spell
-	augroup end
+augroup("_general_settings", { clear = true })
+autocmd(
+	"FileType",
+	{
+		pattern = { "qf", "help", "man", "lspinfo" },
+		callback = function()
+			keymap('n', 'q', ':close<CR>', opts)
+		end,
+		group = "_general_settings"
+	}
+)
+autocmd(
+	"TextYankPost",
+	{
+		pattern = "*",
+		callback = function()
+			require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200}) 
+		end,
+		group = "_general_settings"
+	}
+)
+autocmd(
+	"BufWinEnter",
+	{
+		pattern = "*",
+		command = "set formatoptions-=cro",
+		group = "_general_settings"
+	}
+)
+autocmd(
+	"FileType",
+	{
+		pattern = "qf",
+		command = "set nobuflisted"
+	}
+)
 
-	augroup _markdown
-		autocmd!
-		autocmd FileType markdown setlocal wrap
-		autocmd FileType markdown setlocal spell
-	augroup end
+augroup("_fast", { clear = true })
+autocmd(
+	"FileType",
+	{
+		pattern = { "gitcommit", "markdown" },
+		command = "setlocal wrap",
+		group = "_fast"
+	}
+)
+autocmd(
+	"FileType",
+	{
+		pattern = { "gitcommit", "markdown" },
+		command = "setlocal spell",
+		group = "_fast"
+	}
+)
 
-	augroup _auto_resize
-		autocmd!
-		autocmd VimResized * tabdo wincmd = 
-	augroup end
+augroup("autoResize", { clear = true })
+autocmd(
+	"VimResized",
+	{
+		pattern = "*",
+		command = "tabdo wincmd ="
+	}
+)
 
-	augroup _alpha
-		autocmd!
-		autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
-	augroup end
+augroup("foldindent", { clear = true })
+autocmd(
+	"FileType",
+	{
+		pattern = { "lua", "python", "ruby", "bash" },
+		command = "setlocal foldmethod=indent",
+		group = "foldindent"
+	}
+)
 
-	augroup _lua
-		autocmd!
-		autocmd FileType lua setlocal foldmethod=indent
-	augroup end
-
-	augroup _python
-		autocmd!
-		autocmd FileType python setlocal foldmethod=indent
-	augroup end
-
-	augroup _c
-		autocmd!
-		autocmd FileType c,cpp,rust noremap <silent> <buffer> ;; a::<Esc>
-	augroup end
-]]
+augroup("_semicolon", { clear = true })
+autocmd(
+	"FileType",
+	{
+		pattern = { "c", "cpp", "rust" },
+		callback = function() 
+			keymap('n', ';;', 'a::<Esc>', opts)
+		end,
+		group = "_semicolon"
+	}
+)
