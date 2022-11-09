@@ -9,32 +9,36 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
---==## Normal mode ##==--
 -- nvim tree (lua) fast access shortcuts 
 keymap('n', '<Leader>e', ":NvimTreeToggle<CR>" , opts)
 keymap('n', '<Leader><Leader>f', ":NvimTreeFocus<CR>" , opts)
 
 -- Telescope
 keymap('n', '<Leader>tt', ':Telescope ', nor)
-keymap('n', '<Leader>fr', ':Telescope lsp_references<CR>', opts)
-keymap('n', '<Leader>fb', ':Telescope git_branches<CR>', opts)
-keymap('n', '<Leader>ff', ':Telescope find_files<CR>', opts)
-keymap('n', '<Leader>fg', ':Telescope registers<CR>', opts)
-keymap('n', '<Leader>fs', ':Telescope spell_suggest<CR>', opts)
+keymap('n', '<Leader>fr', function() require("telescope.builtin").lsp_references() end, opts)
+keymap('n', '<Leader>fb', function() require("telescope.builtin").git_branches() end, opts)
+keymap('n', '<Leader>ff', function() require("telescope.builtin").find_files(require('telescope.themes').get_dropdown({ previewer = false })) end, opts)
+keymap('n', '<Leader>fg', function() require("telescope.builtin").registers() end, opts)
+keymap('n', '<Leader>fs', function() require("telescope.builtin").spell_suggest() end, opts)
+keymap('n', '<Leader>fc', function() require("telescope.builtin").colorscheme() end, opts)
+keymap('n', '<Leader>fm', function() require("telescope.builtin").marks() end, opts)
+keymap({ 'n', 'i' }, '<C-p>', function() require("telescope.builtin").find_files() end, opts)
 
 -- vim multi corsur
-keymap('n', '<C-c>', ':VMClear<CR>', opts)
+keymap({ 'n', 'v' }, '<C-c>', ':VMClear<CR>', opts)
 
--- Tabs shortcuts 
-keymap('n', 'rt', ':tabclose<CR>', opts)
-keymap('n', 'tf', ':tabfind ', opts)
+-- new line
+keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o', opts)
+
+-- remove a word backwards
+keymap({ 'i', 'c' }, '<C-BS>', '<C-w>', nor)
 
 -- Paste without counting the deleted values
 keymap('n', '"p', '"0p', opts)
 
 -- add semicolon in the end
 keymap('n', '<Leader>;', 'A;<Esc>', opts)
--- keymap('n', '<C-Semicolon>', 'A;', opts)
+keymap('x', '<Leader>;', ':norm A;<Esc>', opts)
 
 -- arrows for gj & gk (when using warping mode)
 keymap('n', '<Down>', 'gj', opts)
@@ -43,35 +47,32 @@ keymap('n', '<Up>', 'gk', opts)
 -- selecting last change
 keymap('n', 'gV', '`[v`]', opts)
 
--- use diff mode with one keymap 
-keymap('n', '<Leader><Leader>d', ':windo diffthis<CR>', opts)
-
--- save and source
-keymap('n', '<Leader><Leader>x', ':w<CR>:source %<CR>', opts)
-
---==## Visual mode ##==--
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
---==## Visual Block mode ##==--
--- Move text up and down
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+-- save and source
+keymap('n', '<Leader><Leader>x', ':w<CR>:source %<CR>', opts)
 
---==## Multi modes ##==--
--- Files finding with Telescope
-keymap({ 'n', 'i' }, '<C-p>', '<Esc>:Telescope find_files<CR>', opts)
+-- Sorting code blocks
+keymap("x", "<Leader><Leader>s", ":!sort<CR>", opts)
 
--- new line
-keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o', opts)
+-- Edit replace selected text
+keymap({ 'v', 'x' }, '<Leader>sa', ':<CR>:%s//', nor)
+keymap('n', '<Leader>sa', '*:%s//', nor)
 
--- Move text up and down
-keymap({ "n", "v" }, "<A-j>", ":m .+1<CR>==", opts)
-keymap({ "n", "v" }, "<A-k>", ":m .-2<CR>==", opts)
+-- move text up and down
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", nor)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", nor)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
--- remove a word backwards
-keymap({ 'i', 'c' }, '<C-BS>', '<C-w>', nor)
+-- Tabs shortcuts 
+keymap('n', '<Leader>tf', ':tabfind ', nor)
+keymap('n', '<Leader>td', ':tabclose<CR>', opts)
+keymap('n', '<Leader>tn', ':tabnew<CR>', opts)
 
 -- Splits --
 -- Splits moving with ctrl + hjkl shortcuts
