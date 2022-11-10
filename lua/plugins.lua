@@ -68,7 +68,11 @@ return require('packer').startup(function()
 	-- Telescope for navigation
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = 'nvim-lua/plenary.nvim'
+		requires = { 
+			'nvim-lua/plenary.nvim',
+			-- extentions
+			'nvim-telescope/telescope-project.nvim'
+		}
 	}
 
 	-- NeoVim Tree written in lua
