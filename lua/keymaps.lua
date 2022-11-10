@@ -22,6 +22,7 @@ keymap('n', '<Leader>fg', function() require("telescope.builtin").registers() en
 keymap('n', '<Leader>fs', function() require("telescope.builtin").spell_suggest() end, opts)
 keymap('n', '<Leader>fc', function() require("telescope.builtin").colorscheme() end, opts)
 keymap('n', '<Leader>fm', function() require("telescope.builtin").marks() end, opts)
+keymap('n', '<Leader>fp', function() require("telescope").extensions.project.project() end, opts)
 keymap({ 'n', 'i' }, '<C-p>', function() require("telescope.builtin").find_files() end, opts)
 
 -- vim multi corsur
