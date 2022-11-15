@@ -1,40 +1,33 @@
 -- -==*==- Options -==*==- --
-local opt = vim.opt
-local o = vim.o
 
 -- General
-opt.clipboard = 'unnamedplus'
-opt.termguicolors = true
-opt.backup = false
-opt.swapfile = false
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.termguicolors = true
 
 -- Tabs
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.smarttab = true
-opt.smartindent = true
-opt.expandtab = false
-opt.shiftwidth = 4
-opt.autoindent = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.smarttab = true
+vim.opt.smartindent = true
+vim.opt.expandtab = false
+vim.opt.shiftwidth = 4
+vim.opt.autoindent = true
 
 -- numbers
-opt.number = true
-opt.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- UX 
-opt.spell = true
-opt.mouse = "a"
-o.foldmethod = "syntax"
+vim.opt.spell = true
+vim.opt.mouse = "a"
+vim.o.foldmethod = "syntax"
 
 -- styling
-opt.hlsearch = false
-opt.hidden = true
-opt.wrap = false
-opt.scrolloff = 7
-opt.wildmode = {'longest', 'list', 'full'}
-opt.splitbelow = true
-opt.splitright = true
-opt.fileencoding = "utf-8"
-opt.cursorline = true
-opt.cursorlineopt = "number"
-opt.signcolumn     = "auto:3"
+vim.opt.hlsearch = false
+vim.opt.hidden = true
+vim.opt.wrap = false
+vim.opt.scrolloff = 7
+vim.opt.wildmode = 'full'
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.fileencoding = "utf-8"
