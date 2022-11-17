@@ -90,3 +90,16 @@ autocmd(
 		group = "_semicolon"
 	}
 )
+
+-- packer
+augroup("packer", { clear = true })
+autocmd("VimLeavePre", {
+	pattern = "*",
+	command = "PackerSync",
+	group = "packer"
+})
+autocmd("BufWritePost", {
+	pattern = "plugins.lua",
+	command = "source % | PackerCompile",
+	group = "packer"
+})
