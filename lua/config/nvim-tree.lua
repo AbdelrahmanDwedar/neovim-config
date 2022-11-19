@@ -10,7 +10,9 @@ require("nvim-tree").setup({
 		  { key = "t", action = "tabnew" },
 		  { key = "s", action = "split" },
 		  { key = "v", action = "vsplit" },
-		  { key = "C", action = "cd" }
+		  { key = "C", action = "cd" },
+		  { key = "l", action = "open_node" },
+		  { key = "h", action = "close_node"}
 		},
 	  },
 	},
