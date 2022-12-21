@@ -54,6 +54,8 @@ return require('packer').startup(function()
 		config = function() require("nvim-autopairs").setup {} end
 	}
 
+	use "Djancyp/better-comments.nvim"
+
 	-- discord presence for neovim
 	use 'andweeb/presence.nvim'
 
