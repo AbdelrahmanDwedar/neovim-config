@@ -45,4 +45,5 @@ I don't use ton of plugins with NeoVim, I just use the plugins that I find helpf
 
 ---
 
-###### This config will be changing continuously. 
+> **Warning**  
+> This repository has been moved to [my dotfiles](https://github.com/AbdelrahmanDwedar/dotfiles/tree/main/config/nvim), and this version will be stopped from being supported
